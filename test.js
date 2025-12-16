@@ -130,18 +130,27 @@ function finish()
     clearInterval(intervalId);
     const percent = Math.round((correct / questions.length) * 100);
 
-    test.innerHTML = `
-        <div class="result">
-            <h2>Результаты теста</h2>
-            <p>Пользователь: <b>${userName}</b></p>
-            <p>Правильных ответов: <b>${correct}</b> из ${questions.length}</p>
-            <p>Процент выполнения: <b>${percent}%</b></p>
-            <button class="reload-btn" onclick="resetTest()">Начать заново</button>
-        </div>
+    const result = `
+        <h2>Результаты теста</h2>
+        <p>Студент: ${userName}</p>
+        <p>Баллы: ${correct} из ${questions.length}</p>
+        <p>Процент: ${percent}%</p>
+        <button onclick="window.close()">Закрыть окно</button>
     `;
 
-    localStorage.removeItem("current");
-    localStorage.removeItem("correct");
+    const win = window.open("", "", "width=500, height=500");
+    
+    if (win) 
+    {
+        win.document.write(result);
+    } 
+    else 
+    {
+        alert("Ваш результат: " + correct + " из " + questions.length);
+    }
+
+    localStorage.clear();
+    location.reload(); 
 }
 
 function resetTest()
