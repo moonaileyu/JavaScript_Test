@@ -1,0 +1,136 @@
+@font-face 
+{
+    font-family: Geologica;
+    src: url(Geologica.ttf);
+}
+
+* 
+{
+    box-sizing: border-box;
+    font-family: Geologica;
+}
+
+body 
+{
+    background-color: #f2f7f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.test 
+{
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0eadd;
+}
+
+#title 
+{
+    font-size: 18pt;
+    color: #2d3a35;
+    margin-top: 0;
+}
+
+.step 
+{
+    color: #7a8a83;
+    font-size: 12pt;
+    margin-bottom: 15px;
+}
+
+.option 
+{
+    display: block;
+    padding: 12px 15px;
+    border: 1px solid #d1d9d4;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover 
+{
+    background-color: #f9fdfb;
+    border-color: #a3b8ad;
+}
+
+.option input 
+{
+    margin-right: 10px;
+}
+
+.text
+{
+    font-size: 12pt;
+}
+
+.controls 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#next 
+{
+    padding: 10px 25px;
+    background-color: #52a38b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+#next:disabled 
+{
+    background-color: #cbd5d0;
+    cursor: not-allowed;
+}
+
+#timer 
+{
+    font-weight: bold;
+    color: #d35959;
+    font-size: 12pt;
+}
+
+.result 
+{
+    text-align: center;
+    line-height: 1.5;
+}
+
+.result h2
+{
+    font-size: 20pt;
+    color: #2d3a35;
+}
+
+.result p
+{
+    font-size: 12pt;
+}
+
+.reload-btn 
+{
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #52a38b;
+    color: #52a38b;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+}
